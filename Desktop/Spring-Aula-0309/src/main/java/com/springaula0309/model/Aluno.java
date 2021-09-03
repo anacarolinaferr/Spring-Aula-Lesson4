@@ -1,7 +1,6 @@
 package com.springaula0309.model;
 
 import lombok.Data;
-
 import java.time.LocalDate;
 
 @Data

@@ -29,13 +29,13 @@ public class AlunoDto implements Serializable {
                 '}';
     }
 
-    public Aluno converteParaAluno() {
-        Aluno aluno = new Aluno(this.nome, this.sexo, this.dataNascimento);
+    public Aluno converteParaAluno(){
+        Aluno aluno = new Aluno(this.nome,this.sexo,this.dataNascimento);
         return aluno;
     }
 
-    public static AlunoDto converteParaAlunoDto(Aluno aluno) {
-        AlunoDto alunoDto = new AlunoDto(aluno.getNome(), aluno.getSexo(), aluno.getDataNascimento());
+    public static AlunoDto converteParaAlunoDto(Aluno aluno){
+        AlunoDto alunoDto = new AlunoDto(aluno.getNome(),aluno.getSexo(),aluno.getDataNascimento());
         return alunoDto;
     }
 }

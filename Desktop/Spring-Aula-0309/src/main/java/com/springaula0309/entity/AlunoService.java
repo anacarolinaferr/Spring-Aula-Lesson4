@@ -11,20 +11,20 @@ public class AlunoService {
 
     private static List<Aluno> listaAlunos = new ArrayList<Aluno>();
 
-    public Aluno cadastra(Aluno aluno) {
+    public Aluno cadastra(Aluno aluno){
         listaAlunos.add(aluno);
         Long idAluno = (long) listaAlunos.size();
         aluno.setId(idAluno);
         return aluno;
     }
 
-    public List<Aluno> listarAlunos() {
+    public List<Aluno> listarAlunos(){
         return AlunoService.listaAlunos;
     }
 
-    public Aluno getAluno(long id) {
-        for (Aluno aluno : listaAlunos) {
-            if (aluno.getId().equals(id)) {
+    public Aluno getAluno(long id){
+        for(Aluno aluno: listaAlunos){
+            if(aluno.getId().equals(id)){
                 return aluno;
             }
         }

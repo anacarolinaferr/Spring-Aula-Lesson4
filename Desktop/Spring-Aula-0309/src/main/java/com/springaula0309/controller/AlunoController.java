@@ -18,7 +18,7 @@ public class AlunoController {
     private AlunoService alunoService;
 
     @PostMapping("/cadastra")
-    public ResponseEntity<AlunoDto> cadastraAluno(@RequestBody AlunoDto alunoDto, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<AlunoDto> cadastraAluno(@RequestBody AlunoDto alunoDto, UriComponentsBuilder uriBuilder ){
         Aluno aluno = alunoDto.converteParaAluno();
         Aluno alunoCadastrado = alunoService.cadastra(aluno);
 
@@ -27,7 +27,7 @@ public class AlunoController {
     }
 
     @GetMapping("/{id}")
-    public Aluno getAlunobyId(@PathVariable("id") Long id) {
+    public Aluno getAlunobyId(@PathVariable("id") Long id){
         Aluno aluno = alunoService.getAluno(id);
         return aluno;
     }
